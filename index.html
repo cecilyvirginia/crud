@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="createtwo.css">
+</head>
+<body>
+   
+   
+    <div class="maindiv">
+        <button class="mainbutton">Add Employee</button>
+        
+    </div>
+    <div class="firstmaindivision">
+        
+    <div class="secdivision">
+
+       
+        <h2 class="manage">Employee Management</h2>
+        <form action="">
+  <div class="secondfirstsubdiv">
+        <input type="text" class="first" placeholder="Employee First Name">
+        <h1 id="details" style="color:antiquewhite;"></h1>
+    
+        <input type="text" class="five" placeholder="Employee Last Name">
+        <h1 id="detailsone" ></h1>
+        </div>
+        <div class="secondsecsubdiv">
+        <input type="text" class="employ" placeholder="Employee Email Id">
+        <h1 id="detailstwo"></h1>
+     
+     <input type="number" class="phone" placeholder="Employee Phone Number">
+     <h1 id="detailsthree"></h1></div>
+     <input type="text" class="paswrd" placeholder="Enter the password">
+     <input type="text" placeholder="Confirm the password">
+
+       <span class="male"><input type="radio" name="gender" style="margin-right: 0" >Male</span>
+        <span class="female"><input type="radio" name="gender">Female</span>
+        <button class="subone" >Register</button>
+        </form>
+    </div>
+    <div class="list">
+        <ul>
+            <li style="display:flex;">
+                <p class="empfirst">First Name</p>
+                <p class="emplast">Last Name</p>
+                <p class="empid">Email Id</p>
+                <p class="empph">Phone Number</p>
+                
+            </li>
+            <li class="tag">
+            
+            </li>
+                </ul></div></div>
+   
+    
+    <!-- <ul class="tag">
+
+    </ul> -->
+   
+       
+    
+    <script>
+let tag=document.querySelector(".tag");
+let firstinp=document.querySelector(".first");
+let btnone=document.querySelector(".subone");
+let fifth=document.querySelector(".five");
+let employ=document.querySelector(".employ");
+let mainbutton=document.querySelector(".mainbutton");
+let maindiv=document.querySelector(".maindiv");
+let secdivision=document.querySelector(".secdivision");
+let phonenumber=document.querySelector(".phone")
+let details=document.getElementById("details");
+let detailsone=document.getElementById("detailsone");
+let detailstwo=document.getElementById("detailstwo");
+let list=document.querySelector(".list");
+
+mainbutton.addEventListener("click",hide);
+
+
+secdivision.style.display="none";
+maindiv.style.display="block";
+list.style.display="none";
+
+function hide(){
+    secdivision.style.display="block";
+    maindiv.style.display="none";
+    list.style.display="none";
+
+}
+btnone.addEventListener("click",createfunction);
+function createfunction(e){
+    e.preventDefault();
+    
+    if(firstinp.value==""|| firstinp.value==null|| firstinp.value==undefined){
+        details.innerHTML="enter the data";
+        return false;
+    }else if (fifth.value==""||fifth.value==null||fifth.value==undefined)
+    {
+detailsone.innerHTML="enter the data";
+return false;
+    }else if(employ.value==""||employ.value==null||employ.value==undefined){
+        detailstwo.innerHTML="enter the data";
+        return false;
+    }else if (phonenumber.value==""||phonenumber.value==null||phonenumber.value==undefined)
+    {
+detailsthree.innerHTML="enter the data";
+return false;
+     } else{
+details.innerHTML="";
+detailsone.innerHTML="";
+detailstwo.innerHTML="";
+detailsthree.innerHTML="";
+maindiv.style.display="block";
+secdivision.style.display="none";
+list.style.display="block";
+
+    let newdivision=document.createElement("div");
+    tag.appendChild(newdivision);
+    let secondinput=document.createElement("input");
+    secondinput.className="secinp";
+   
+    
+    newdivision.appendChild(secondinput);
+    secondinput.value=firstinp.value;
+    
+
+    secondinput.setAttribute("readonly","readonly");
+    let anotherinput=document.createElement("input");
+    anotherinput.className="anotherinp";
+    newdivision.appendChild(anotherinput);
+    anotherinput.value=fifth.value;
+    anotherinput.setAttribute("readonly","readonly");
+    let employinput=document.createElement("input");
+    employinput.className="empinp";
+    newdivision.appendChild(employinput);
+    employinput.value=employ.value;
+    employinput.setAttribute("readonly","readonly");
+    let phoneinput=document.createElement("input");
+    phoneinput.className="phinp";
+    newdivision.appendChild(phoneinput);
+    phoneinput.value=phonenumber.value;
+    phoneinput.setAttribute("readonly","readonly");
+    let edit=document.createElement("button");
+    edit.innerHTML="Edit";
+    edit.className="editbutton";
+    newdivision.appendChild(edit);
+    edit.addEventListener("click",updatefunction);
+    function updatefunction(){
+        secondinput.removeAttribute("readonly","readonly");
+        anotherinput.removeAttribute("readonly","readonly");
+        employinput.removeAttribute("readonly","readonly");
+        phoneinput.removeAttribute("readonly","readonly");
+        newdivision.appendChild(secondinput.value);
+        newdivision.appendChild(anotherinput.value);
+        newdivision.appendChild(employinput.value);
+        newdivision.appendChild(phoneinput.value);
+    }
+        let save=document.createElement("button");
+        save.innerHTML="Save";
+        save.className="savebutton";
+        newdivision.appendChild(save);
+        save.addEventListener("click",savefunction);
+        function savefunction(){
+            secondinput.setAttribute("readonly","readonly");
+            anotherinput.setAttribute("readonly","readonly");
+            employinput.setAttribute("readonly","readonly");
+            phoneinput.setAttribute("readonly","readonly");
+            newdivision.appendChild(secondinput.value);
+            newdivision.appendchild(anotherinput.value);
+            newdivision.appendchild(employinput.value);
+            newdivision.appendChild(phoneinput.value);
+        }
+        let delbtn=document.createElement("button");
+        delbtn.innerHTML=("Delete");
+        delbtn.className="delbutton";
+        newdivision.appendChild(delbtn);
+        delbtn.addEventListener("click",delfunction);
+        function delfunction(){
+            newdivision.style.display="none";
+        }
+        
+    
+}}
+// let las =document.querySelector(".two");
+// let tagtwo=document.querySelector(".ultag");
+// let submitlast=document.querySelector(".submit");
+// submitlast.addEventListener("click",firstfunction);
+// function firstfunction(event){
+// event.preventDefault();
+// let firstdivision=document.createElement("div");
+// tagtwo.appendChild(firstdivision);
+// let nextinput=document.createElement("input");
+
+// firstdivision.appendChild(nextinput);
+// nextinput.value=las.value;
+// nextinput.setAttribute("readonly","readonly");
+// let change=document.createElement("button");
+// change.innerHTML="Edit";
+// firstdivision.appendChild(change);
+// change.addEventListener("click",changefunction);
+// function changefunction(){
+//     nextinput.removeAttribute("readonly","readonly");
+//     firstdivision.appendChild(nextinput.value);
+// }
+// let saveone=document.createElement("button");
+//         saveone.innerHTML="Save";
+//         firstdivision.appendChild(saveone);
+//         saveone.addEventListener("click",savefunctionone);
+//         function savefunctionone(){
+//             nextinput.setAttribute("readonly","readonly");
+//             firstdivision.appendChild(nextinput.value);
+//         }
+
+// let del=document.createElement("button");
+// del.innerHTML=("Delete");
+// firstdivision.appendChild(del);
+// del.addEventListener("click",delfunctionone);
+// function delfunctionone(){
+//     firstdivision.style.display="none";
+// }
+
+
+
+
+//     }
+
+//     let lastinput=document.querySelector(".three");
+//     let rollnotag=document.querySelector(".rollno");
+//     let lastbtn=document.querySelector(".subtwo");
+//     lastbtn.addEventListener("click",rollcreate);
+//     function rollcreate(event){
+//         event.preventDefault();
+//         let seconddiv=document.createElement("div");
+//         rollnotag.appendChild(seconddiv);
+//         let secondinput=document.querySelector("input");
+//         seconddiv.appendChild(secondinput);
+//         secondinput.value=lastinput.value;
+//         secondinput.setAttribute("readonly","readonly");
+//         let changetwo=document.createElement("button");
+//         changetwo.innerHTML="Edit";
+//         seconddiv.appendChild(changetwo);
+//         changetwo.addEventListener("click",changetwofunc);
+//         function changetwofunc(){
+//             secondinput.removeAttribute("readonly","readonly"); 
+//             seconddiv.appendChild(secondinput.value);
+//         }
+//         let savetwo=document.createElement("button");
+//         savetwo.innerHTML="Save";
+//         seconddiv.appendChild(savetwo);
+//         savetwo.addEventListener("click",savefunctiontwo);
+//         function savefunctiontwo(){
+//             secondinput.setAttribute("readonly","readonly");
+//             seconddiv.appendChild(nextinput.value);
+//         }
+//         let deltwo=document.createElement("button");
+// deltwo.innerHTML=("Delete");
+// seconddiv.appendChild(deltwo);
+// deltwo.addEventListener("click",delfunctiontwo);
+// function delfunctiontwo(){
+//     seconddiv.style.display="none";
+// }
+
+//     }  
+
+
+    
+    </script>
+</body>
+</html>

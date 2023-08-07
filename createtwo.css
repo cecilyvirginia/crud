@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Righteous&display=swap');
+body{
+    
+}
+.employeedetails{
+    text-align: center;
+    background-color:#034794f6;
+    margin-top: 0px;
+    color:whitesmoke;
+    height: 50px;
+}
+.mainbutton{
+background-color:#0066b2;
+color: white;
+padding:10px 20px;
+border-color:#0066b2;
+border-radius: 10px;
+font-size: 12px;
+margin-bottom: 20px;
+font-weight: bold;
+}
+.secdivision{
+    height:500px;
+    width:80%;
+    margin:auto;
+    background-color:white;
+ 
+    background-size: cover;
+    
+    padding-top: 40px;
+    border-top-left-radius: 140px;
+    border-bottom-left-radius: 140px;
+    font-family: 'Roboto';
+    border-left: 80px;
+    margin-left: 130px;
+    
+    
+}
+label{
+    margin-left: 25px;
+    
+    font-weight: bolder;
+    color:white;
+   
+    font-size: 15px;
+    
+    
+}
+input{
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    width:230px;
+    border-radius: 5px;
+    border-color:rgba(0, 0, 139, 0.403);
+    background-color: white;
+    font-family: 'roboto';
+    
+   
+}
+.subone{
+    margin-left: -10px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color:#002D62;
+    color:white;
+    margin-top: 70px;
+    width:150px;
+    border-color: #002D62;
+    
+}
+.tag{
+background-color:darkblue;
+padding-left: 40px;
+
+}
+.editbutton{
+    background-color:#0066b2;
+    margin-left: 750px;
+    padding: 10px 30px;
+    
+    margin-right:10px ;
+    border-radius: 5px;
+    border-color:#0066b2;
+    color: white;
+}
+.savebutton{
+    background-color:#0066b2;
+    margin-left: 10px;
+    padding: 10px 30px;
+    margin-right:10px ;
+    border-radius: 5px;
+    border-color: #0066b2;
+    color: white;
+}
+.delbutton{
+    background-color:#0066b2;
+    margin-left: 10px;
+    padding: 10px 30px;
+    margin-right:10px ;
+    border-radius: 5px;
+    border-color: #0066b2;
+    color: white;
+}
+#details{
+    font-size: 10px !important;
+    margin-top: 80px;
+    margin-left: -180px;
+    color:darkblue !important;
+}
+#detailsone{
+    font-size: 10px !important;
+    margin-top: 80px;
+    margin-left:-180px;
+    color:darkblue;
+}
+#detailstwo{
+    font-size: 10px !important;
+    margin-top: 80px;
+    margin-left: -180px;
+    color:darkblue;
+}
+#detailsthree{
+    font-size: 10px !important;
+    margin-top: 80px;
+    margin-left: -180px;
+    color:darkblue;
+}
+li{
+    list-style-type: none;
+}
+p{
+    
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-family: 'roboto';
+    
+}
+.empfirst{
+margin-left: 0px;
+
+}
+.emplast{
+    margin-left: 195px;
+}
+.empid{
+    margin-left: 195px;
+}
+.empph{
+    margin-left: 210px;
+}
+.tag{
+    background-color:#002D62;
+}
+.firstmaindivision{
+    width: 80%;
+    background-color: #002D62;
+    height: 600px;
+    margin-left: 10%;
+    padding-top: 50px;
+    margin-top: 10px;
+}
+.secondfirstsubdiv{
+display: flex;
+padding-left: 70px;
+}
+.secondsecsubdiv{
+    display: flex;
+    padding-left: 70px;
+}
+.paswrd{
+    margin-right: 80px;
+    margin-left: 120px;
+    
+}
+.male{
+    margin-left:0px;
+}
+.manage{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.911);
+}
+.five{
+    margin-left: 310px;
+}
+.phone{
+    margin-left: 310px;
+}
+.secinp{
+    width:180px !important;
+    margin-left: -50px;
+    
+}
+.anotherinp{
+    width:180px !important;
+    
+}
+.empinp{
+    width:180px !important;
+}
+.phinp{
+    width:180px !important;
+}
+.welcome{
+    margin-left: -400px;
+}
+.male{
+    font-family: 'roboto';
+    margin-right: -83px;
+    color: rgba(0, 0, 0, 0.744);
+    margin-left: -33px;
+    padding-top: -200px;
+}
+.female{
+    font-family: 'roboto';
+    margin-right: 164px;
+    color: rgba(0, 0, 0, 0.744);
+}
